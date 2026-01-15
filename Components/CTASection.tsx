@@ -9,15 +9,16 @@ const CTASection = () => {
     setLoading(true);
 
     try {
-      const fileId = "1ByarxnATR5Y1PBi_HB7oXYigPtNiVQEN";
+      const fileId = "1PaRbz1PBA3bFh_hjBCZ3hke89T0_bCB7";
       const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
       
       const link = document.createElement("a");
       link.href = directDownloadUrl;
-      link.setAttribute("download", "Land_app.apk");
+      link.setAttribute("download", "Land App v1.0.apk");
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
+      
       
       setTimeout(() => {
         document.body.removeChild(link);
@@ -52,7 +53,7 @@ const CTASection = () => {
                      shadow-2xl shadow-blue-600/50
                      transition-all duration-300
                      hover:scale-105 hover:shadow-blue-500/70
-                     overflow-hidden group disabled:opacity-70 disabled:cursor-not-allowed w-full md:w-auto justify-center"
+                     overflow-hidden group disabled:opacity-70 disabled:cursor-not-allowed w-full md:w-auto justify-center cursor-pointer"
         >
           {loading ? (
             <span className="relative z-10 animate-spin">⏳</span>

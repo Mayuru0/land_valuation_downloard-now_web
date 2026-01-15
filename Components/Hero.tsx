@@ -9,12 +9,12 @@ const Hero = () => {
   const handleDownload = async () => {
     setLoading(true);
     try {
-      const fileId = "1ByarxnATR5Y1PBi_HB7oXYigPtNiVQEN";
+      const fileId = "1PaRbz1PBA3bFh_hjBCZ3hke89T0_bCB7";
       const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
       
       const link = document.createElement("a");
       link.href = directDownloadUrl;
-      link.setAttribute("download", "Land_app.apk");
+      link.setAttribute("download", "Land App v1.0.apk");
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
@@ -65,7 +65,7 @@ const Hero = () => {
         <button 
           onClick={handleDownload}
           disabled={loading}
-          className="relative group bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white px-8 md:px-14 py-4 md:py-6 rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden w-full md:w-auto disabled:opacity-70 disabled:cursor-not-allowed"
+          className="relative group bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white px-8 md:px-14 py-4 md:py-6 rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden w-full md:w-auto disabled:opacity-70 cursor-pointer"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           {loading ? (
