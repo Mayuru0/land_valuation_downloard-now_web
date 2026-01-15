@@ -1,8 +1,8 @@
 import CTASection from "@/Components/CTASection";
 import Features from "@/Components/Features";
 import Footer from "@/Components/Footer";
-import Header from "@/Components/Header";
-import Hero from "@/Components/Hero";
+//import Header from "@/Components/Header";
+//import Hero from "@/Components/Hero";
 import Particles from "@/Components/Particles";
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
       <Particles />
 
-      <Header />
-      <Hero />
+      {/* <Header />
+      <Hero /> */}
       <Features />
       <CTASection />
       <Footer />
