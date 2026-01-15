@@ -7,13 +7,22 @@ import { useEffect, useState } from "react";
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // const images = [
+  //   "/UI/1.PNG",
+  //   "/UI/2.PNG",
+  //   "/UI/3.PNG",
+  //   "/UI/4.PNG",
+  //   "/UI/5.PNG",
+  //   "/UI/6.PNG",
+  // ];
   const images = [
-    "/UI/1.PNG",
-    "/UI/2.PNG",
-    "/UI/3.PNG",
-    "/UI/4.PNG",
-    "/UI/5.PNG",
-    "/UI/6.PNG",
+    "/UI/emu/1.png",
+    "/UI/emu/2.png",
+    "/UI/emu/3.png",
+    "/UI/emu/4.png",
+    "/UI/emu/5.png",
+    "/UI/emu/6.png",
+   
   ];
 
   useEffect(() => {
@@ -57,8 +66,7 @@ const Carousel = () => {
                 <Image
                   src={images[currentIndex]}
                   alt={`Land Valuation App Screenshot ${currentIndex + 1}`}
-                  width={400}
-                  height={800}
+                  fill
                   priority
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
