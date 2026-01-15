@@ -1,37 +1,37 @@
 import React from 'react'
 import FeatureCard from './FeatureCard';
-import { Shield, Star, Users } from 'lucide-react';
+import { Lock, Star,  Zap } from 'lucide-react';
 
 const Features = () => {
   const features = [
     {
-      icon: Users,
-      title: "Easy to Use",
-      description: "A simple and easy-to-use interface that anyone can navigate effortlessly.",
-      bgColor: "bg-green-100",
-      iconColor: "text-green-600"
+      icon: Zap,
+      title: "Lightning Fast",
+      description: "Get instant property valuations with our advanced AI-powered algorithms. No waiting, just results.",
+      gradient: "bg-gradient-to-br from-yellow-500 to-orange-600"
     },
     {
-      icon: Shield,
-      title: "Secure & Safe",
-      description: "Keep your data secure with modern encryption technology for peace of mind.",
-      bgColor: "bg-blue-100",
-      iconColor: "text-blue-600"
+      icon: Lock,
+      title: "Bank-Level Security",
+      description: "Your data is protected with military-grade encryption. Privacy and security are our top priorities.",
+      gradient: "bg-gradient-to-br from-blue-500 to-cyan-600"
     },
     {
       icon: Star,
-      title: "Top Rated",
-      description: "Trusted and loved by thousands of users with excellent ratings.",
-      bgColor: "bg-purple-100",
-      iconColor: "text-purple-600"
+      title: "Premium Experience",
+      description: "Join thousands of satisfied users who trust our platform for accurate property assessments.",
+      gradient: "bg-gradient-to-br from-blue-500 to-cyan-600"
     }
   ];
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-        Key Features
-      </h3>
+    <section className="bg-linear-to-b from-slate-900 to-slate-950  mx-auto px-4 py-20">
+      <div className="text-center mb-16">
+        <h3 className="text-5xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          Powerful Features
+        </h3>
+        <p className="text-gray-400 text-lg">Everything you need for accurate land valuation</p>
+      </div>
       <div className="grid md:grid-cols-3 gap-8">
         {features.map((feature, index) => (
           <FeatureCard key={index} {...feature} />
@@ -40,5 +40,6 @@ const Features = () => {
     </section>
   );
 };
+
 
 export default Features

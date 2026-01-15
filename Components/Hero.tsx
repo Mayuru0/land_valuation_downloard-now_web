@@ -1,37 +1,53 @@
-import { Download, Smartphone } from 'lucide-react';
-import React from 'react'
+import { Download, Smartphone, Sparkles } from 'lucide-react';
+
+import Carousel from './Carousel';
 
 const Hero = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16 text-center">
-      <div className="mb-8">
-        <div className="inline-block bg-gradient-to-r from-green-600 to-blue-600 p-4 rounded-3xl mb-6">
-          <Smartphone className="w-20 h-20 text-white" />
+    <section className="bg-linear-to-b from-slate-900 via-blue-900/20 to-slate-900  mx-auto px-4 py-20 text-center relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+      </div>
+
+      <div className="mb-12 relative z-10">
+        <div className="inline-block relative mb-8">
+          <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-cyan-600 blur-2xl opacity-50 animate-pulse"></div>
+          <div className="relative bg-linear-to-br from-blue-600 to-cyan-600 p-5 rounded-3xl shadow-2xl">
+            <Smartphone className="w-20 h-20 text-white" />
+          </div>
         </div>
-        <h2 className="text-5xl font-bold text-gray-900 mb-4">
+        
+        <h2 className="text-6xl font-bold mb-6 bg-linear-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-gradient">
           Welcome to Land Valuation
         </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-          Download our modern mobile application designed to make your life easier. Get the best experience with cutting-edge features.
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Experience the future of property valuation with our cutting-edge mobile application. 
+          <span className="text-blue-400 font-semibold"> Smart, Fast & Accurate.</span>
         </p>
       </div>
 
+
+
+        {/* App Preview with Carousel */}
+      <div className="relative z-10 mb-10">
+        <Carousel />
+      </div>
+
+
+
       {/* Download Now Button */}
-      <div className="mb-12">
-        <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-green-700 hover:to-blue-700 transition transform hover:scale-105 shadow-2xl flex items-center gap-3 mx-auto">
-          <Download className="w-7 h-7" />
-          Download Now
+      <div className="mb-16 relative z-10">
+        <button className="relative group bg-linear-to-r from-blue-600 via-cyan-600 to-blue-600 text-white px-14 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden">
+          <div className="absolute inset-0 bg-linear-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <Download className="w-7 h-7 relative z-10 animate-bounce" />
+          <span className="relative z-10">Download Now</span>
+          <Sparkles className="w-6 h-6 relative z-10" />
         </button>
       </div>
 
-      {/* App Preview */}
-      <div className="bg-gradient-to-r from-green-100 to-blue-100 rounded-3xl p-8 shadow-xl">
-        <div className="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-inner">
-          <div className="bg-gradient-to-br from-green-400 to-blue-500 h-96 rounded-xl flex items-center justify-center">
-            <Smartphone className="w-32 h-32 text-white opacity-50" />
-          </div>
-        </div>
-      </div>
+    
     </section>
   );
 };
