@@ -1,7 +1,17 @@
+"use client";
 import { Globe } from 'lucide-react';
 
 
+
 const Header = () => {
+ 
+ const handleClick = () => {
+    const section = document.getElementById("download");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 shadow-2xl border-b border-blue-500/20 backdrop-blur-lg">
       <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
@@ -13,7 +23,9 @@ const Header = () => {
             Land Valuation
           </h1>
         </div>
-        <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-cyan-700 transition transform hover:scale-105 shadow-lg shadow-blue-500/50">
+        <button
+        onClick={handleClick}
+        className="bg-gradient-to-r  from-blue-600 to-cyan-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-cyan-700 transition transform hover:scale-105 shadow-lg shadow-blue-500/50 cursor-pointer">
           Get Started
         </button>
       </div>

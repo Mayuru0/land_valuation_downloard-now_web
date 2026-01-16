@@ -31,7 +31,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-slate-900 via-blue-900/20 to-slate-900 mx-auto px-4 py-20 text-center relative overflow-hidden">
+    <section  className="bg-gradient-to-b from-slate-900 via-blue-900/20 to-slate-900 mx-auto px-4 py-20 text-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
@@ -56,7 +56,9 @@ const Hero = () => {
       </div>
 
       {/* App Preview with Carousel */}
-      <div className="relative z-10 mb-10">
+      <div className="relative z-10 mb-10"
+         id="download"
+      >
         <Carousel />
       </div>
 
@@ -65,6 +67,7 @@ const Hero = () => {
         <button 
           onClick={handleDownload}
           disabled={loading}
+         
           className="relative group bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white px-8 md:px-14 py-4 md:py-6 rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden w-full md:w-auto disabled:opacity-70 cursor-pointer"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
