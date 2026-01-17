@@ -68,7 +68,7 @@ const Hero = () => {
           onClick={handleDownload}
           disabled={loading}
          
-          className="relative group bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white px-8 md:px-14 py-4 md:py-6 rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden w-full md:w-auto disabled:opacity-70 cursor-pointer"
+          className="relative group bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white text-center justify-center px-8 md:px-14 py-4 md:py-6 rounded-full text-base md:text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center gap-4 mx-auto overflow-hidden w-full md:w-auto disabled:opacity-70 cursor-pointer"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           {loading ? (
